@@ -1,7 +1,7 @@
 FROM node:carbon
 WORKDIR /usr/src/app
-cp package*.json ./
+COPY package*.json ./
 RUN npm install
-cp . .
+COPY . .
 EXPOSE 8080
 CMD {"rpm","start"}
